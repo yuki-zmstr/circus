@@ -70,14 +70,20 @@ public class Circus {
 
         Cage<Duck> duckCage = new Cage<>();
         Duck duck = new Duck("Dewey");
-        duckCage.lockUp(duck);
+        duckCage.lockUp(duck); // can lock up a duck. not some other thing.
+
         Parrot parrot = new Parrot("Popper");
         Cage<Parrot> parrotCage = new Cage<>();
         parrotCage.lockUp(parrot);
 
+        Elephant eli = new Elephant("Eli");
+        Cage<Elephant> elephantCage = new Cage<>();
+        elephantCage.lockUp(eli);
+
         ArrayList<Cage> cages = new ArrayList<>();
         cages.add(duckCage);
         cages.add(parrotCage);
+        cages.add(elephantCage);
 
         for(Cage c: cages) {
             c.release();
